@@ -1,0 +1,89 @@
+$background:linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
+// $background:linear-gradient(to left top, #000000, #250b17, #400b2c, #5a0548, #70036b, #70036b, #70036b, #70036b, #5a0548, #400b2c, #250b17, #000000);
+$attachment:fixed;
+$color1: white;
+$color2: black;
+
+@mixin display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bodyy{
+    margin: 0;
+    padding: 0;
+    background-image: $background;   
+    // background-color: $color2; 
+    background-attachment: $attachment;
+}
+
+
+.navBar{
+    @include display;
+
+
+    .logo{
+        color: rgb(233, 231, 231);
+        font-size: 2em;
+        font-family:fantasy;
+        margin-left: 2em;
+        margin-top: 1rem;
+        
+        a{
+            text-decoration: none;
+                color: $color1;
+        }
+    }
+
+    .links{
+        @include display;
+        color: $color1;
+        margin-right: 3em;
+        div{
+            margin-left: 2em;
+            a{
+                text-decoration: none;
+                color: $color1;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+        
+    }
+    
+}
+
+.cardd{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    margin-top:15em;
+    
+    
+    .parag{
+        color: $color1;
+    }
+
+    .title{
+        color: $color1;
+    }
+
+    .button-next{
+        @include display;
+        justify-content: end;
+        
+       
+        .btn{
+            color: $color1;
+            font-size: 1.5em;
+            border: none;
+            &:hover{
+                color: $color2;
+            }
+    
+        }
+
+    }
+
+    
+}

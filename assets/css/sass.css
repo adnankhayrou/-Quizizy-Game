@@ -1,0 +1,86 @@
+.bodyy {
+  margin: 0;
+  padding: 0;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#000000), color-stop(#1f0612), color-stop(#320822), color-stop(#440436), color-stop(#52004f), color-stop(#52004f), color-stop(#52004f), color-stop(#52004f), color-stop(#440436), color-stop(#320822), color-stop(#1f0612), to(#000000));
+  background-image: linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
+  background-attachment: fixed;
+}
+
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navBar .logo {
+  color: rgb(233, 231, 231);
+  font-size: 2em;
+  font-family: fantasy;
+  margin-left: 2em;
+  margin-top: 1rem;
+}
+.navBar .logo a {
+  text-decoration: none;
+  color: white;
+}
+.navBar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  margin-right: 3em;
+}
+.navBar .links div {
+  margin-left: 2em;
+}
+.navBar .links div a {
+  text-decoration: none;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.cardd {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 15em;
+}
+.cardd .parag {
+  color: white;
+}
+.cardd .title {
+  color: white;
+}
+.cardd .button-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.cardd .button-next .btn {
+  color: white;
+  font-size: 1.5em;
+  border: none;
+}
+.cardd .button-next .btn:hover {
+  color: black;
+}

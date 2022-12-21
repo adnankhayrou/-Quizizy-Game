@@ -1,0 +1,65 @@
+.bodyy {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
+  background-attachment: fixed;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBar .logo {
+  color: rgb(233, 231, 231);
+  font-size: 2em;
+  font-family: fantasy;
+  margin-left: 2em;
+  margin-top: 1rem;
+}
+.navBar .logo a {
+  text-decoration: none;
+  color: white;
+}
+.navBar .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-right: 3em;
+}
+.navBar .links div {
+  margin-left: 2em;
+}
+.navBar .links div a {
+  text-decoration: none;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.cardd {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 15em;
+}
+.cardd .parag {
+  color: white;
+}
+.cardd .title {
+  color: white;
+}
+.cardd .button-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: end;
+}
+.cardd .button-next .btn {
+  color: white;
+  font-size: 1.5em;
+  border: none;
+}
+.cardd .button-next .btn:hover {
+  color: black;
+}/*# sourceMappingURL=sass.css.map */
