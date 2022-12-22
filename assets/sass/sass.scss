@@ -1,8 +1,9 @@
 $background:linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
-// $background:linear-gradient(to left top, #000000, #250b17, #400b2c, #5a0548, #70036b, #70036b, #70036b, #70036b, #5a0548, #400b2c, #250b17, #000000);
+$font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 $attachment:fixed;
 $color1: white;
 $color2: black;
+$color3:rgb(204, 1, 255);
 
 @mixin display{
     display: flex;
@@ -10,12 +11,22 @@ $color2: black;
     align-items: center;
 }
 
+@mixin size($w,$h){
+    width: $w;
+    height: $h;
+}
+
+@mixin title($mb){
+    color: $color1;
+    font-family: $font;
+    margin-bottom: $mb;
+}
+
 // body style
 .bodyy{
     margin: 0;
     padding: 0;
     background-image: $background;   
-    // background-color: $color2; 
     background-attachment: $attachment;
 
 
@@ -25,8 +36,8 @@ $color2: black;
 
 
     .logo{
-        color: rgb(233, 231, 231);
-        font-size: 2em;
+        color: $color1;
+        font-size: 2rem;
         font-family:fantasy;
         margin-left: 2em;
         margin-top: 1rem;
@@ -46,7 +57,7 @@ $color2: black;
             a{
                 text-decoration: none;
                 color: $color1;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: $font;
                 &:hover{
                     color: $color2;
                 }
@@ -56,60 +67,102 @@ $color2: black;
     }
     
 }
-// card infprmations style
+.container{
+
+    // card infprmations style
 .cardd{
-    width: 50%;
+    // width: 50%;
+    @include size(50%,0);
     margin: auto;
     padding: 10px;
     margin-top:6em;
-    
+    display: none;
     
     .parag{
         color: $color1;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: $font;
+        margin-bottom: 3em;
     }
 
     .title{
-        color: $color1;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       @include title(1em);
     }
+  
+ }
 
+// buttons next and prev
     .stepper-nav{
+        margin-right: 15em;
+        margin-top: 2em;
+        
         @include display;
         justify-content: end;
         
         .prev-btn{
             color: $color2;
-            font-size: 1.5em;
+            font-size: 1.1em;
             border: none;
             border-radius: 10px;
             margin-right: .5em;
-            // background-color: $color1;
-            &:hover{
-                color:  rgb(204, 1, 255);
-            }
-    
+            color: $color2;
+            font-family: $font;
         }
+
         .next-btn{
             color: $color2;
-            font-size: 1.5em;
+            font-size: 1.1em;
             border-radius: 10px;
-            // background-color: #000000;
             border: none;
-            &:hover{
-                color:  rgb(204, 1, 255);
-            }
-    
+            font-family: $font;
         }
-       
-        
-
-
+    
     }
 
-    
-}
+    // Quistions Cards
 
+    .cards{
+        // display: none;
+        .title1{
+            @include title(.5em);
+            @include display;
+            justify-content: center;
+            margin-top: 1em;
+            font-size: 3em;
+            color: $color1;
+        }
+
+        .question{
+            @include display;
+            justify-content: center;
+            @include title(1em);
+            font-size: 2em;
+        }
+
+        .cards-ans{
+            @include display;
+            flex-wrap: wrap;
+
+            .card{
+                @include size(18em,10em);
+                margin: 1em;
+                transition: box-shadow .4s;
+                &:hover{
+                    box-shadow: 0 0 30px $color3;
+                    transform:scale(1.02);
+                }
+
+                .answer{
+                    @include display;
+                    justify-content: center;
+                    margin-top: 4em;
+                    font-family: $font;
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+    }
+}
 
 // stepper style
 
@@ -117,7 +170,7 @@ $color2: black;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 7rem;
+    padding-top: 5rem;
 
     .step {
         display: flex;
@@ -129,25 +182,25 @@ $color2: black;
 
         .step-label{
            color: $color1;
-           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-family: $font;
         }
 
         .step-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgb(255, 255, 255);
-            font-size: 24px;
-            line-height: 40px;
-            color: rgb(204, 1, 255);
+           @include size(1.5em, 1.5em);
+            border-radius: 1.25em;
+            background-color: $color1;
+            font-size: 2em;
+            line-height: 1.5em;
+            color: $color3;
             text-align: center;
+            font-family: $font;
           }
           
       }
 }
 
-.step.active .step-icon {
-    background-color: rgb(0, 0, 0);
+ .step.active .step-icon {
+    background-color: $color2;
   }
 
 }

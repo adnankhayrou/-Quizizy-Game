@@ -17,8 +17,8 @@
           align-items: center;
 }
 .bodyy .navBar .logo {
-  color: rgb(233, 231, 231);
-  font-size: 2em;
+  color: white;
+  font-size: 2rem;
   font-family: fantasy;
   margin-left: 2em;
   margin-top: 1rem;
@@ -51,21 +51,27 @@
 .bodyy .navBar .links div a:hover {
   color: black;
 }
-.bodyy .cardd {
+.bodyy .container .cardd {
   width: 50%;
+  height: 0;
   margin: auto;
   padding: 10px;
   margin-top: 6em;
+  display: none;
 }
-.bodyy .cardd .parag {
+.bodyy .container .cardd .parag {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 3em;
 }
-.bodyy .cardd .title {
+.bodyy .container .cardd .title {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 1em;
 }
-.bodyy .cardd .stepper-nav {
+.bodyy .container .stepper-nav {
+  margin-right: 15em;
+  margin-top: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,24 +85,98 @@
       -ms-flex-pack: end;
           justify-content: end;
 }
-.bodyy .cardd .stepper-nav .prev-btn {
+.bodyy .container .stepper-nav .prev-btn {
   color: black;
-  font-size: 1.5em;
+  font-size: 1.1em;
   border: none;
   border-radius: 10px;
   margin-right: 0.5em;
-}
-.bodyy .cardd .stepper-nav .prev-btn:hover {
-  color: rgb(204, 1, 255);
-}
-.bodyy .cardd .stepper-nav .next-btn {
   color: black;
-  font-size: 1.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.bodyy .container .stepper-nav .next-btn {
+  color: black;
+  font-size: 1.1em;
   border-radius: 10px;
   border: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.bodyy .cardd .stepper-nav .next-btn:hover {
-  color: rgb(204, 1, 255);
+.bodyy .container .cards:hover {
+  -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.bodyy .container .cards .title1 {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+  font-size: 3em;
+  color: white;
+}
+.bodyy .container .cards .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+.bodyy .container .cards .cards-ans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.bodyy .container .cards .cards-ans .card {
+  width: 18em;
+  height: 10em;
+  margin: 1em;
+}
+.bodyy .container .cards .cards-ans .card .answer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1em;
 }
 .bodyy .stepper {
   display: -webkit-box;
@@ -106,7 +186,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding-top: 7rem;
+  padding-top: 5rem;
 }
 .bodyy .stepper .step {
   display: -webkit-box;
@@ -130,15 +210,16 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .bodyy .stepper .step .step-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  font-size: 24px;
-  line-height: 40px;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1.25em;
+  background-color: white;
+  font-size: 2em;
+  line-height: 1.5em;
   color: rgb(204, 1, 255);
   text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .bodyy .step.active .step-icon {
-  background-color: rgb(0, 0, 0);
+  background-color: black;
 }
