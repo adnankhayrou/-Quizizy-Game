@@ -5,8 +5,7 @@
   background-image: linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
   background-attachment: fixed;
 }
-
-.navBar {
+.bodyy .navBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,18 +16,18 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.navBar .logo {
+.bodyy .navBar .logo {
   color: rgb(233, 231, 231);
   font-size: 2em;
   font-family: fantasy;
   margin-left: 2em;
   margin-top: 1rem;
 }
-.navBar .logo a {
+.bodyy .navBar .logo a {
   text-decoration: none;
   color: white;
 }
-.navBar .links {
+.bodyy .navBar .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,28 +40,32 @@
   color: white;
   margin-right: 3em;
 }
-.navBar .links div {
+.bodyy .navBar .links div {
   margin-left: 2em;
 }
-.navBar .links div a {
+.bodyy .navBar .links div a {
   text-decoration: none;
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
-.cardd {
+.bodyy .navBar .links div a:hover {
+  color: black;
+}
+.bodyy .cardd {
   width: 50%;
   margin: auto;
   padding: 10px;
-  margin-top: 15em;
+  margin-top: 6em;
 }
-.cardd .parag {
+.bodyy .cardd .parag {
   color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.cardd .title {
+.bodyy .cardd .title {
   color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.cardd .button-next {
+.bodyy .cardd .stepper-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,11 +79,66 @@
       -ms-flex-pack: end;
           justify-content: end;
 }
-.cardd .button-next .btn {
-  color: white;
+.bodyy .cardd .stepper-nav .prev-btn {
+  color: black;
   font-size: 1.5em;
   border: none;
+  border-radius: 10px;
+  margin-right: 0.5em;
 }
-.cardd .button-next .btn:hover {
+.bodyy .cardd .stepper-nav .prev-btn:hover {
+  color: rgb(204, 1, 255);
+}
+.bodyy .cardd .stepper-nav .next-btn {
   color: black;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: none;
+}
+.bodyy .cardd .stepper-nav .next-btn:hover {
+  color: rgb(204, 1, 255);
+}
+.bodyy .stepper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-top: 7rem;
+}
+.bodyy .stepper .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+.bodyy .stepper .step .step-label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.bodyy .stepper .step .step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  font-size: 24px;
+  line-height: 40px;
+  color: rgb(204, 1, 255);
+  text-align: center;
+}
+.bodyy .step.active .step-icon {
+  background-color: rgb(0, 0, 0);
 }
