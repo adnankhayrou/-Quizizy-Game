@@ -1,9 +1,13 @@
-$background:linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
+// $background:linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
+// $background: linear-gradient(to left top, #000000, #220a15, #3a0c26, #52073b, #680155, #680155, #680155, #680155, #52073b, #3a0c26, #220a15, #000000);
+$background: linear-gradient(to left top, #000000, #2a2029, #403f58, #3b6589, #0090ae, #0090ae, #0090ae, #0090ae, #3b6589, #403f58, #2a2029, #000000);
 $font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 $attachment:fixed;
 $color1: white;
 $color2: black;
 $color3:rgb(204, 1, 255);
+// $color3:rgb(0, 246, 221);
+$color4: #0CC9B8;
 
 @mixin display{
     display: flex;
@@ -20,6 +24,12 @@ $color3:rgb(204, 1, 255);
     color: $color1;
     font-family: $font;
     margin-bottom: $mb;
+}
+
+@mixin test(){
+    justify-content: center;
+    font-size: 2em;
+    text-align: center;
 }
 
 // body style
@@ -72,45 +82,65 @@ $color3:rgb(204, 1, 255);
     // card infprmations style
 .cardd{
     // width: 50%;
-    @include size(50%,0);
+    @include size(70%,0);
     margin: auto;
     padding: 10px;
     margin-top:6em;
-    display: none;
+    // display: none;
     
     .parag{
         color: $color1;
         font-family: $font;
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     }
 
     .title{
-       @include title(1em);
+       @include title(.5em);
+       font-size: 3em;
+
+    }
+
+    .button-start{
+        @include display;
+        justify-content: flex-end;
+        
+        .btn-start{
+           color: $color1;
+           font-size: 1.5em;
+           border: none;
+           background: none;
+           background-attachment: $attachment;
+           font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           &:hover{
+            color: $color2;
+           }
+ 
+        }
+
     }
   
  }
 
 // buttons next and prev
     .stepper-nav{
-        margin-right: 15em;
+        @include display;
+        justify-content: center;
         margin-top: 2em;
         
-        @include display;
-        justify-content: end;
-        
-        .prev-btn{
-            color: $color2;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 10px;
-            margin-right: .5em;
-            color: $color2;
-            font-family: $font;
-        }
+        // .prev-btn{
+        //     color: $color2;
+        //     font-size: 1.1em;
+        //     border: none;
+        //     border-radius: 10px;
+        //     margin-right: .5em;
+        //     color: $color2;
+        //     font-family: $font;
+        // }
 
-        .next-btn{
+        .submit-btn{
+            @include size(10em,2.5em);
             color: $color2;
-            font-size: 1.1em;
+            font-size: 1.3em;
             border-radius: 10px;
             border: none;
             font-family: $font;
@@ -133,9 +163,10 @@ $color3:rgb(204, 1, 255);
 
         .question{
             @include display;
-            justify-content: center;
             @include title(1em);
+            justify-content: center;
             font-size: 2em;
+            text-align: center;
         }
 
         .cards-ans{
@@ -143,18 +174,22 @@ $color3:rgb(204, 1, 255);
             flex-wrap: wrap;
 
             .card{
-                @include size(18em,10em);
+                @include size(18em,5em);
+                border-radius: 3em;
                 margin: 1em;
+                color: $color1;
                 transition: box-shadow .4s;
+                background-color: $color2;
                 &:hover{
-                    box-shadow: 0 0 30px $color3;
+                    box-shadow: 0 0 20px $color1;
                     transform:scale(1.02);
                 }
 
                 .answer{
                     @include display;
                     justify-content: center;
-                    margin-top: 4em;
+                    text-align: center;
+                    margin-top: 1.5em;
                     font-family: $font;
                     font-size: 1.1em;
                 }
@@ -190,8 +225,8 @@ $color3:rgb(204, 1, 255);
             border-radius: 1.25em;
             background-color: $color1;
             font-size: 2em;
-            line-height: 1.5em;
-            color: $color3;
+            line-height: 1.6em;
+            color: $color4;
             text-align: center;
             font-family: $font;
           }

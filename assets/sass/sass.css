@@ -1,7 +1,7 @@
 .bodyy {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to left top, #000000, #1f0612, #320822, #440436, #52004f, #52004f, #52004f, #52004f, #440436, #320822, #1f0612, #000000);
+  background-image: linear-gradient(to left top, #000000, #2a2029, #403f58, #3b6589, #0090ae, #0090ae, #0090ae, #0090ae, #3b6589, #403f58, #2a2029, #000000);
   background-attachment: fixed;
 }
 .bodyy .navBar {
@@ -39,43 +39,52 @@
   color: black;
 }
 .bodyy .container .cardd {
-  width: 50%;
+  width: 70%;
   height: 0;
   margin: auto;
   padding: 10px;
   margin-top: 6em;
-  display: none;
 }
 .bodyy .container .cardd .parag {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .bodyy .container .cardd .title {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  font-size: 3em;
 }
-.bodyy .container .stepper-nav {
-  margin-right: 15em;
-  margin-top: 2em;
+.bodyy .container .cardd .button-start {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
-.bodyy .container .stepper-nav .prev-btn {
-  color: black;
-  font-size: 1.1em;
+.bodyy .container .cardd .button-start .btn-start {
+  color: white;
+  font-size: 1.5em;
   border: none;
-  border-radius: 10px;
-  margin-right: 0.5em;
-  color: black;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: none;
+  background-attachment: fixed;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-.bodyy .container .stepper-nav .next-btn {
+.bodyy .container .cardd .button-start .btn-start:hover {
   color: black;
-  font-size: 1.1em;
+}
+.bodyy .container .stepper-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+.bodyy .container .stepper-nav .submit-btn {
+  width: 10em;
+  height: 2.5em;
+  color: black;
+  font-size: 1.3em;
   border-radius: 10px;
   border: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -96,11 +105,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: center;
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 1em;
+  justify-content: center;
   font-size: 2em;
+  text-align: center;
 }
 .bodyy .container .cards .cards-ans {
   display: flex;
@@ -110,12 +120,15 @@
 }
 .bodyy .container .cards .cards-ans .card {
   width: 18em;
-  height: 10em;
+  height: 5em;
+  border-radius: 3em;
   margin: 1em;
+  color: white;
   transition: box-shadow 0.4s;
+  background-color: black;
 }
 .bodyy .container .cards .cards-ans .card:hover {
-  box-shadow: 0 0 30px rgb(204, 1, 255);
+  box-shadow: 0 0 20px white;
   transform: scale(1.02);
 }
 .bodyy .container .cards .cards-ans .card .answer {
@@ -123,7 +136,8 @@
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  margin-top: 4em;
+  text-align: center;
+  margin-top: 1.5em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.1em;
 }
@@ -151,8 +165,8 @@
   border-radius: 1.25em;
   background-color: white;
   font-size: 2em;
-  line-height: 1.5em;
-  color: rgb(204, 1, 255);
+  line-height: 1.6em;
+  color: #0CC9B8;
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
