@@ -1,7 +1,15 @@
 const steps = document.querySelectorAll('.step');
 const nextBtn = document.querySelector('#start-button');
 const cards = document.querySelector('#cards-quiz');
-// const start = document.getElementById('button-start');
+const submit = document.getElementById('submit');
+let question = document.getElementById("question");
+let choice1 = document.getElementById("choice1");
+let choice2 = document.getElementById("choice2");
+let choice3 = document.getElementById("choice3");
+let choice4 = document.getElementById("choice4");
+let currentStep = 0;
+let questionIndex = 0;
+
 document.querySelector("#cards-quiz").style.display = 'none';
     document.querySelector("#start-button").addEventListener('click', function(){
     document.querySelector("#cards-quiz").style.display = 'block';
@@ -9,8 +17,33 @@ document.querySelector("#cards-quiz").style.display = 'none';
 });
 
 
+randomize(questions);
+function displayQst(questionIndex){
+  question.innerHTML = questions[questionIndex].question;
+  choice1.innerHTML = questions[questionIndex].choice1;
+  choice2.innerHTML = questions[questionIndex].choice2;
+  choice3.innerHTML = questions[questionIndex].choice3;
+  choice4.innerHTML = questions[questionIndex].choice4;
+}
 
-let currentStep = 0;
+function nextQst(){
+    if(qstIndex < qsts.length){
+      displayQst(qstIndex);
+      qstIndex++;
+      progressupdate(qstIndex);
+    }
+  }
+  let score = 0;
+  function answerSubmit(answer){
+    if(answer == qsts[qstIndex].correct){
+      score++;
+      choice = "correct";
+    }
+    else{
+      choice = "wrong";
+    }console.log(choice);}
+  
+
     const updateStep = stepIndex => {
         // Update active step
         steps.forEach(s => s.classList.remove('active'));
@@ -23,7 +56,6 @@ let currentStep = 0;
         currentStep++;
         updateStep(currentStep);
       });
-      
       updateStep(currentStep);
 
 

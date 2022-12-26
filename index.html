@@ -16,7 +16,7 @@
     <!-- NAVBAR -->
     <nav>
         <div class="navBar">
-            <div class="logo"><a href="#">Quizizy-Game</a></div>
+            <div class="logo"><a href="index.html">Quizizy</a></div>
             <div class="links">
                 <div><a href="#">Contact</a></div>
                 <div><a href="#">Info</a></div>
@@ -44,49 +44,56 @@
 
     <!-- Informations, Quiz and Results -->
     <div class="container">
+
         <!-- INFORMATIONS -->
         <div class="cardd" id="card-info">
             <h2 class="title">Informations</h2>
             <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aspernatur. Beatae similique hic ex, veniam itaque porro iure corrupti mollitia unde neque nihil! Sint nesciunt, illo nobis incidunt nam dolores Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque molestias ut vero ex. Debitis nisi iusto cumque aut, esse veniam. Deleniti vero totam debitis adipisci accusamus natus dolorem commodi hic. ?</p>
             <div class="button-start">
-                <!-- <button type="button" class="btn-start" id="start-button">Start Quiz -->
                 <button class="btn-start" id="start-button">Start Quiz --></button>
             </div>
         </div>
 
         <!-- Quiz Cards-->
         <div class="cards" id="cards-quiz">
+            <!-- quiz title -->
             <h2 class="title1">Quiz Time</h2>
-            <p class="question">Lorem ipsum similique hic ex, veniam itaque porro dolores?</p>
 
+            <!-- quiz question -->
+            <div class="ques-div">
+              <p class="question" id="question"></p>
+            </div>
+           
+            <!-- answers buttons -->
             <div class="cards-ans">
-                <div class="card">
-                    <p class="answer">Lorem ipsum similique hic ?</p>
-                </div>
-    
-                <div class="card">
-                    <p class="answer">veniam itaque porro dolores ?</p>
-                </div>
-    
-                <div class="card">
-                    <p class="answer">similique hic ex, veniam itaque ?</p>
-                </div>
-    
-                <div class="card">
-                    <p class="answer">Lorem ipsum porro dolores?</p>
-                </div>
-            </div> 
-            <div class="stepper-nav">
-                <!-- <button class="prev-btn">Previous</button> -->
-                <button type="submit" class="submit-btn">Submit</button>
+                <button class="answer" id="choice1" onclick="answerSubmit('1');"></button>
+                            
+                <button class="answer" id="choice2" onclick="answerSubmit('2');"></button>
+                            
+                <button class="answer" id="choice3" onclick="answerSubmit('3');"></button>
+                            
+                <button class="answer" id="choice4" onclick="answerSubmit('4');"></button>
+            </div>
+
+            <!-- result button -->
+            <div class="stepper-nav">  
+                <button class="btn-result" id="results">Results --></button>
             </div>
         </div>
 
+        <!-- results -->
+        <div class="results" id="card-results">
+            <h2 class="res-title">Results</h2>
+            <p class="res-parag">Lorem ipsumr adipisicing</p>
+            <div class="button-try">
+              <button class="btn-try" id="try"><a href="index.html">TRY AGAIN</a></button>
+            </div>
+        </div>
 
     </div>
 
 
-   <!-- RESULTS -->
+   
 
 
    <script src="/assets/js/data.js"></script>
