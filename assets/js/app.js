@@ -55,7 +55,7 @@ function nextQuestion(){
 }
 
 function answerSubmit(answer){
-  if (questions.length==0) {
+  if (questions.length == 0) {
       return
   }
   if(answer == questions[questionIndex].correct){
