@@ -1,7 +1,7 @@
 // all quistions 
 var questions = [
     {
-      qst: "Why is AWS more economical than traditional data centers for applications with varying compute workloads?",
+      question: "Why is AWS more economical than traditional data centers for applications with varying compute workloads?",
       choice1: "Amazon EC2 costs are billed on a monthly basis",
       choice2: "Users retain full administrative access to their Amazon EC2 instances.",
       choice3: "Amazon EC2 instances can be launched on demand when needed",
@@ -9,7 +9,7 @@ var questions = [
       correct: "3",
     },
     {
-      qst: "Which AWS service would simplify the migration of a database to AWS?",
+      question: "Which AWS service would simplify the migration of a database to AWS?",
       choice1: "AWS Storage Gateway",
       choice2: "AWS Database Migration Service (AWS DMS)",
       choice3: "Amazon EC2",
@@ -17,7 +17,7 @@ var questions = [
       correct: "2",
     },
     {
-      qst: " Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?",
+      question: " Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?",
       choice1: "AWS Config",
       choice2: "AWS OpsWorks",
       choice3: "AWS SDK",
@@ -25,7 +25,7 @@ var questions = [
       correct: "4",
     },
     {
-      qst:"Wich AWS networking service enables a company to create a virtual network within AWS?",
+      question:"Wich AWS networking service enables a company to create a virtual network within AWS?",
       choice1: "AWS Config",
       choice2: "Amazon Route 53",
       choice3: "AWS Direct Connect",
@@ -33,7 +33,7 @@ var questions = [
       correct: "4",
     },
     {
-      qst: "Which of the following is an AWS responsibility under the AWS shared responsibility model?",
+      question: "Which of the following is an AWS responsibility under the AWS shared responsibility model?",
       choice1: "Configuring third-party applications",
       choice2: "Maintaining physical hardware",
       choice3: "Securing application access and data",
@@ -41,7 +41,7 @@ var questions = [
       correct: "2",
     },
     {
-      qst: "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?",
+      question: "Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?",
       choice1: "AWS Regions",
       choice2: "Edge locations",
       choice3: "Availability Zones",
@@ -49,7 +49,7 @@ var questions = [
       correct: "2",
     },
     {
-      qst: "How would a system administrator add an additional layer of login security to a user's AWS Management Console?",
+      question: "How would a system administrator add an additional layer of login security to a user's AWS Management Console?",
       choice1: "Use Amazon Cloud Directory",
       choice2: "Audit AWS Identity and Access Management (IAM) roles",
       choice3: "Enable multi-factor authentication",
@@ -57,7 +57,7 @@ var questions = [
       correct: "3",
     },
     {
-      qst: "Which service can identify the user that made the API call when an Amazon EC2 instance is terminated?",
+      question: "Which service can identify the user that made the API call when an Amazon EC2 instance is terminated?",
       choice1: "AWS Trusted Advisor",
       choice2: "AWS CloudTrail",
       choice3: "AWS X-Ray",
@@ -65,7 +65,7 @@ var questions = [
       correct: "2",
     },
     {
-      qst: "Which service would be used to send alerts based on Amazon CloudWatch alarms?",
+      question: "Which service would be used to send alerts based on Amazon CloudWatch alarms?",
       choice1: "Amazon Simple Notification Service (Amazon SNS)",
       choice2: "AWS CloudTrail",
       choice3: "AWS Trusted Advisor",
@@ -73,7 +73,7 @@ var questions = [
       correct: "1",
     },
     {
-      qst: "Where can a user find information about prohibited actions on the AWS infrastructure?",
+      question: "Where can a user find information about prohibited actions on the AWS infrastructure?",
       choice1: "AWS Trusted Advisor",
       choice2: "AWS Identity and Access Management (IAM)",
       choice3: "AWS Billing Console",

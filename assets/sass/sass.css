@@ -13,8 +13,8 @@
   color: white;
   font-size: 2rem;
   font-family: fantasy;
-  margin-left: 2em;
-  margin-top: 1rem;
+  margin: 0 1em 0 1em;
+  margin-top: 0.5rem;
 }
 .bodyy .navBar .logo a {
   text-decoration: none;
@@ -26,6 +26,7 @@
   align-items: center;
   color: white;
   margin-right: 3em;
+  margin-top: 1em;
 }
 .bodyy .navBar .links div {
   margin-left: 2em;
@@ -43,7 +44,7 @@
   height: 0;
   margin: auto;
   padding: 10px;
-  margin-top: 6em;
+  margin-top: 2em;
 }
 .bodyy .container .cardd .parag {
   color: white;
@@ -84,7 +85,7 @@
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: 3em;
   color: white;
 }
@@ -111,7 +112,7 @@
   justify-content: space-evenly;
 }
 .bodyy .container .cards .cards-ans .answer {
-  width: 19em;
+  width: 17em;
   height: 8em;
   border-radius: 3em;
   margin: 1em;
