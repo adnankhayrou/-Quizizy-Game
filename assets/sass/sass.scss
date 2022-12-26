@@ -81,22 +81,24 @@ $color4: #0CC9B8;
 
     // card infprmations style
 .cardd{
-    // width: 50%;
-    @include size(70%,0);
+    
+    @include size(90%,0);
     margin: auto;
     padding: 10px;
     margin-top:6em;
     // display: none;
-    
     .parag{
         color: $color1;
         font-family: $font;
         margin-bottom: 2em;
+        font-size: 1.5em;
+        text-align: center
     }
 
     .title{
        @include title(.5em);
        font-size: 3em;
+       text-align: center
 
     }
 
@@ -121,32 +123,7 @@ $color4: #0CC9B8;
   
  }
 
-// buttons next and prev
-    .stepper-nav{
-        @include display;
-        justify-content: center;
-        margin-top: 2em;
-        
-        // .prev-btn{
-        //     color: $color2;
-        //     font-size: 1.1em;
-        //     border: none;
-        //     border-radius: 10px;
-        //     margin-right: .5em;
-        //     color: $color2;
-        //     font-family: $font;
-        // }
 
-        .submit-btn{
-            @include size(10em,2.5em);
-            color: $color2;
-            font-size: 1.3em;
-            border-radius: 10px;
-            border: none;
-            font-family: $font;
-        }
-    
-    }
 
     // Quistions Cards
 
@@ -161,42 +138,89 @@ $color4: #0CC9B8;
             color: $color1;
         }
 
-        .question{
-            @include display;
-            @include title(1em);
-            justify-content: center;
-            font-size: 2em;
-            text-align: center;
+        .ques-div{
+            @include size(auto,8em);
+            .question{
+                @include display;
+                @include title(1em);
+                justify-content: center;
+                font-size: 2em;
+                text-align: center;
+            }
         }
+
 
         .cards-ans{
             @include display;
             flex-wrap: wrap;
+            justify-content: space-evenly;
 
-            .card{
-                @include size(18em,5em);
+            .answer{
+                @include size(19em,8em);
                 border-radius: 3em;
                 margin: 1em;
                 color: $color1;
                 transition: box-shadow .4s;
                 background-color: $color2;
+                font-family: $font;
                 &:hover{
                     box-shadow: 0 0 20px $color1;
                     transform:scale(1.02);
                 }
-
-                .answer{
-                    @include display;
-                    justify-content: center;
-                    text-align: center;
-                    margin-top: 1.5em;
-                    font-family: $font;
-                    font-size: 1.1em;
-                }
             }
         }
 
+    // buttons results
+    .stepper-nav{
+        @include display;
+        justify-content: center;
+        margin-top: 2em;
+        
+        .btn-result{
+            @include size(10em,2.5em);
+            color: $color2;
+            font-size: 1.3em;
+            border-radius: 10px;
+            border: none;
+            font-family: $font;
+        }
     }
+  }
+
+  .results{
+    .res-title{
+        @include title(.5em);
+        @include display;
+        justify-content: center;
+        margin-top: 1em;
+        font-size: 3em;
+        color: $color1;
+    }
+    .res-parag{
+        @include display;
+        @include title(1em);
+        justify-content: center;
+        font-size: 2em;
+        text-align: center;
+    }
+    .button-try{
+        @include display;
+        justify-content: center;
+        margin-top: 2em;
+    .btn-try{
+        @include size(10em,2.5em);
+        color: $color2;
+        font-size: 1.3em;
+        border-radius: 10px;
+        border: none;
+        font-family: $font;
+        a{
+            text-decoration: none;
+            color: $color2;
+        }
+    }
+   }
+  }
 }
 
 // stepper style

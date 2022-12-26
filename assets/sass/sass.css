@@ -39,7 +39,7 @@
   color: black;
 }
 .bodyy .container .cardd {
-  width: 70%;
+  width: 90%;
   height: 0;
   margin: auto;
   padding: 10px;
@@ -49,12 +49,15 @@
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 2em;
+  font-size: 1.5em;
+  text-align: center;
 }
 .bodyy .container .cardd .title {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 0.5em;
   font-size: 3em;
+  text-align: center;
 }
 .bodyy .container .cardd .button-start {
   display: flex;
@@ -73,22 +76,6 @@
 .bodyy .container .cardd .button-start .btn-start:hover {
   color: black;
 }
-.bodyy .container .stepper-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2em;
-}
-.bodyy .container .stepper-nav .submit-btn {
-  width: 10em;
-  height: 2.5em;
-  color: black;
-  font-size: 1.3em;
-  border-radius: 10px;
-  border: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
 .bodyy .container .cards .title1 {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -101,7 +88,11 @@
   font-size: 3em;
   color: white;
 }
-.bodyy .container .cards .question {
+.bodyy .container .cards .ques-div {
+  width: auto;
+  height: 8em;
+}
+.bodyy .container .cards .ques-div .question {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,29 +108,80 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.bodyy .container .cards .cards-ans .card {
-  width: 18em;
-  height: 5em;
+.bodyy .container .cards .cards-ans .answer {
+  width: 19em;
+  height: 8em;
   border-radius: 3em;
   margin: 1em;
   color: white;
   transition: box-shadow 0.4s;
   background-color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.bodyy .container .cards .cards-ans .card:hover {
+.bodyy .container .cards .cards-ans .answer:hover {
   box-shadow: 0 0 20px white;
   transform: scale(1.02);
 }
-.bodyy .container .cards .cards-ans .card .answer {
+.bodyy .container .cards .stepper-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  margin-top: 1.5em;
+  margin-top: 2em;
+}
+.bodyy .container .cards .stepper-nav .btn-result {
+  width: 10em;
+  height: 2.5em;
+  color: black;
+  font-size: 1.3em;
+  border-radius: 10px;
+  border: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.1em;
+}
+.bodyy .container .results .res-title {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  font-size: 3em;
+  color: white;
+}
+.bodyy .container .results .res-parag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 1em;
+  justify-content: center;
+  font-size: 2em;
+  text-align: center;
+}
+.bodyy .container .results .button-try {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+.bodyy .container .results .button-try .btn-try {
+  width: 10em;
+  height: 2.5em;
+  color: black;
+  font-size: 1.3em;
+  border-radius: 10px;
+  border: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.bodyy .container .results .button-try .btn-try a {
+  text-decoration: none;
+  color: black;
 }
 .bodyy .stepper {
   display: flex;
