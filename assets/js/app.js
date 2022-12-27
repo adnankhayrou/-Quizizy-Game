@@ -3,19 +3,25 @@ const nextBtn = document.querySelector('#start-button');
 const cards = document.querySelector('#cards-quiz');
 const result = document.querySelector('#results');
 const results = document.querySelector('#card-results');
-let question = document.getElementById("question");
-let choice1 = document.getElementById("choice1");
-let choice2 = document.getElementById("choice2");
-let choice3 = document.getElementById("choice3");
-let choice4 = document.getElementById("choice4");
-let nextQst = document.querySelectorAll('.answer');
-let resParag = document.querySelector('.res-parag');
+const question = document.getElementById("question");
+const choice1 = document.getElementById("choice1");
+const choice2 = document.getElementById("choice2");
+const choice3 = document.getElementById("choice3");
+const choice4 = document.getElementById("choice4");
+const resParag = document.querySelector('.res-parag');
+const nextQst = document.querySelectorAll('.answer');
+const counter = document.querySelector('.counter');
+// const questionn = document.querySelector('.questionn');
+// const justification = document.querySelector('.justification');
+const answers = document.querySelector('.answers');
+
 for (let i = 0; i < nextQst.length; i++) {
   nextQst[i].addEventListener('click',nextQuestion);
 }
 let currentStep = 0;
 let questionIndex = randoom(questions);
 let score = 0;
+let questionCont = 0;
 
 
 results.style.display = 'none';
@@ -23,6 +29,7 @@ result.style.display = 'none';
 result.addEventListener('click', () => {
   document.querySelector("#cards-quiz").style.display = 'none';
   results.style.display = 'block';
+  displayAnswers ();
 })
 
 document.querySelector("#cards-quiz").style.display = 'none';
@@ -33,7 +40,7 @@ document.querySelector("#cards-quiz").style.display = 'none';
 });
 
 function randoom(arr){
- let index = Math.floor(Math.random() * (arr.length-1));
+ let index = Math.floor(Math.random() * (arr.length));
  return index;
 } 
 
@@ -46,11 +53,22 @@ function displayquestion(questionIndex) {
 
 }
 
+// function displayAnswers () {
+//   for (let index = 0; index < questionsStock.length; index++) {
+//     answers.innerHTML += `
+//     <p class="questionn">${index+1}) - ${questionsStock[index].question}</p>
+//     <p class="justification">${questionsStock[index].justification}</p>`;
+//   }
+// }
+
 function nextQuestion(){
   if (questions.length == 0) {
     result.style.display = 'block';
     return
   }
+  questionCont++;
+  counter.innerHTML = questionCont +'/'+ (questions.length-1+questionCont);
+  // console.log(questionCont);
   displayquestion(questionIndex);
 }
 
@@ -58,16 +76,21 @@ function answerSubmit(answer){
   if (questions.length == 0) {
       return
   }
+
   if(answer == questions[questionIndex].correct){
     score++;
-    console.log(score);
+    // console.log(score);
     if (score >= 5) {
-      resParag.innerHTML = 'congrat you have ' + score + ' questions right you win';
-    }else resParag.innerHTML = 'sorry you have only ' + score + ' questions right you lose good luck next time';
-    
+      resParag.innerHTML = 'congrat you have ' + score +'/10'+ ' questions right you win';
+    }else resParag.innerHTML = 'sorry you have only ' + score +'/10'+ ' questions right you lose good luck next time';
+  }else{
+    questionsStock.push(questions[questionIndex]);
+    console.log(questionsStock);
   }
+  
   questions.splice(questionIndex,1);
   questionIndex = randoom(questions);
+  // console.log(questionIndex);
 }
 
 const updateStep = stepIndex => {
