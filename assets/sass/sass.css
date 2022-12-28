@@ -47,11 +47,12 @@
   margin-top: 2em;
 }
 .bodyy .container .cardd .parag {
+  display: flex;
+  justify-content: center;
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-bottom: 2em;
   font-size: 1.5em;
-  text-align: center;
 }
 .bodyy .container .cardd .title {
   color: white;
@@ -194,13 +195,14 @@
   color: black;
 }
 .bodyy .container .results .answers {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  margin: 0 auto;
   margin-top: 2em;
 }
 .bodyy .container .results .answers .questionn, .bodyy .container .results .answers .justification {
@@ -246,4 +248,26 @@
 }
 .bodyy .step.active .step-icon {
   background-color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .answers {
+    width: 100% !important;
+  }
+  .stepper {
+    padding-top: 2rem !important;
+  }
+  .counter {
+    margin-bottom: 0;
+  }
+  .stepper-nav {
+    margin-top: 0 !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cards-ans .answer {
+    width: 90% !important;
+    height: 3.5em !important;
+    margin-top: 1em !important;
+  }
 }/*# sourceMappingURL=sass.css.map */

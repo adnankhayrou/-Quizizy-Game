@@ -89,11 +89,13 @@ $color4: #0CC9B8;
     margin-top:2em;
     // display: none;
     .parag{
+        display: flex;
+        justify-content: center;
         color: $color1;
         font-family: $font;
         margin-bottom: 2em;
         font-size: 1.5em;
-        text-align: center
+        // text-align: center
     }
 
     .title{
@@ -230,11 +232,12 @@ $color4: #0CC9B8;
     }
    }
    .answers{
-    width: 40%;
+    width: 60%;
     @include display;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin: 0 auto;
     margin-top: 2em;
     
     
@@ -299,4 +302,43 @@ $color4: #0CC9B8;
   }
 
 }
+
+@media screen and (max-width: 1000px) {
+    .answers{
+        width: 100% !important;
+        
+       }
+    .stepper{
+       padding-top: 2rem !important;
+    }
+
+    .counter{
+        margin-bottom: 0;
+    }
+
+    .stepper-nav{
+        margin-top: 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+       .cards-ans{
+        
+        .answer{
+            width: 90% !important;
+            height: 3.5em !important;
+            margin-top: 1em !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 

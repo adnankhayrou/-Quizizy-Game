@@ -53,13 +53,13 @@ function displayquestion(questionIndex) {
 
 }
 
-// function displayAnswers () {
-//   for (let index = 0; index < questionsStock.length; index++) {
-//     answers.innerHTML += `
-//     <p class="questionn">${index+1}) - ${questionsStock[index].question}</p>
-//     <p class="justification">${questionsStock[index].justification}</p>`;
-//   }
-// }
+function displayAnswers () {
+  for (let index = 0; index < questionsStock.length; index++) {
+    answers.innerHTML += `
+    <p class="questionn">${index+1}) - ${questionsStock[index].question}</p>
+    <p class="justification">${questionsStock[index].justification}</p>`;
+  }
+}
 
 function nextQuestion(){
   if (questions.length == 0) {
@@ -108,4 +108,3 @@ result.addEventListener('click', () => {
   updateStep(currentStep);
 });
 updateStep(currentStep);
-
