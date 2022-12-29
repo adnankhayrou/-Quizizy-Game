@@ -166,7 +166,7 @@ $color4: #0CC9B8;
 
             .answer{
                 @include size(17em,8em);
-                border-radius: 3em;
+                border-radius: 1.5em;
                 margin: 1em;
                 color: $color1;
                 transition: box-shadow .4s;
@@ -230,7 +230,7 @@ $color4: #0CC9B8;
     }
    }
    .answers{
-    width: 60%;
+    width: 50%;
     @include display;
     flex-direction: column;
     justify-content: center;
