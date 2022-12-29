@@ -81,11 +81,11 @@ function answerSubmit(answer){
     score++;
     // console.log(score);
     if (score >= 5) {
-      resParag.innerHTML = 'congrat you have ' + score +'/10'+ ' questions right you win';
-    }else resParag.innerHTML = 'sorry you have only ' + score +'/10'+ ' questions right you lose good luck next time';
+      resParag.innerHTML = 'congrat your score is ' + score +'/10'+ ' you win.';
+    }else resParag.innerHTML = 'sorry your score is ' + score +'/10'+ ' you lose good luck next time.';
   }else{
     questionsStock.push(questions[questionIndex]);
-    console.log(questionsStock);
+    // console.log(questionsStock);
   }
   
   questions.splice(questionIndex,1);
