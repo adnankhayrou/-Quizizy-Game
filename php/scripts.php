@@ -1,7 +1,7 @@
 <?php
 include_once "database.php";
 
-function test(){
+
     $conn = new Database;
     $test = "SELECT * FROM questions";
     $stmt =  $conn->connect()->prepare($test);
@@ -10,11 +10,11 @@ function test(){
 
     // var_dump($data);
 
-    $quizzData = "var questions = ".json_encode($data)." ; var questionsStock = [];" ;
-
-    file_put_contents('./assets/js/data.js',$quizzData) ;
-
-}
+    $quizzData = json_encode($data);
+    // "var questions = ".
+    // ." ; var questionsStock = [];"
+    // file_put_contents('./assets/js/data.js',$quizzData) ;
+    echo $quizzData;
 
 
 

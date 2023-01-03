@@ -11,15 +11,16 @@ const choice4 = document.getElementById("choice4");
 const resParag = document.querySelector('.res-parag');
 const nextQst = document.querySelectorAll('.answer');
 const counter = document.querySelector('.counter');
-// const questionn = document.querySelector('.questionn');
-// const justification = document.querySelector('.justification');
 const answers = document.querySelector('.answers');
 
+let questions = [];
+let questionsStock = [];
+json();
 for (let i = 0; i < nextQst.length; i++) {
   nextQst[i].addEventListener('click',nextQuestion);
 }
 let currentStep = 0;
-let questionIndex = randoom(questions);
+let questionIndex = randoom(questions) ;
 let score = 0;
 let questionCont = 0;
 
@@ -108,3 +109,21 @@ result.addEventListener('click', () => {
   updateStep(currentStep);
 });
 updateStep(currentStep);
+
+
+
+//AJAX
+function json() {
+  
+  let getData = new XMLHttpRequest();
+  getData.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                // console.log(this.responseText);
+                questions=JSON.parse(this.responseText);
+                // questionIndex = randoom(questions);
+                // console.log(questions);
+              }
+          };
+  getData.open("GET", "/Quizizy-Game/php/scripts.php" , false);
+  getData.send();
+}

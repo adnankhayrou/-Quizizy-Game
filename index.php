@@ -1,9 +1,4 @@
-<?php
-include_once "./php/scripts.php";
-test();
 
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -119,7 +114,7 @@ test();
    
 
 
-   <script src="./assets/js/data.js"></script>
+   <!-- <script src="./assets/js/data.js"></script> -->
    <script src="./assets/js/app.js"></script>
 </body>
 </html>
