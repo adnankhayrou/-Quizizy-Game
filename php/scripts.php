@@ -5,16 +5,17 @@ function test(){
     $conn = new Database;
     $test = "SELECT * FROM questions";
     $stmt =  $conn->connect()->prepare($test);
-    $result = $stmt->execute() ;
+    $stmt->execute() ;
     $data = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
     // var_dump($data);
 
-    $quizzData = "questions = ".json_encode($data)." ;  questionsStock = [];" ;
+    $quizzData = "var questions = ".json_encode($data)." ; var questionsStock = [];" ;
 
-    file_put_contents('../assets/js/data1.js',$quizzData) ;
+    file_put_contents('./assets/js/data.js',$quizzData) ;
+
 }
-test();
+
 
 
 ?>

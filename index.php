@@ -1,3 +1,10 @@
+<?php
+include_once "./php/scripts.php";
+test();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +105,7 @@
             <h2 class="res-title">Results</h2>
             <p class="res-parag"></p>
             <div class="button-try">
-                <button class="btn-try" id="try"><a href="index.html">TRY AGAIN</a></button>
+                <button class="btn-try" id="try"><a href="index.php">TRY AGAIN</a></button>
             </div>
             <div class="answers">
                     <!-- <p class="questionn"></p>

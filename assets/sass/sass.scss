@@ -41,8 +41,7 @@ $color4: #0CC9B8;
 // navbar style
 .navBar{
     @include display;
-
-
+    
     .logo{
         color: $color1;
         font-size: 2rem;
