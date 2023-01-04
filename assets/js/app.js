@@ -93,18 +93,18 @@ function answerSubmit(answer){
   // console.log(questionIndex);
 }
 
-const updateStep = stepIndex => {
-    // Update active step
-  steps.forEach(s => s.classList.remove('active'));
-  steps[stepIndex].classList.add('active');
-}; 
+function updateStep (stepIndex) {
+  // Update active step
+steps.forEach(step => step.classList.remove('active'));
+steps[stepIndex].classList.add('active');
+};
 
 nextBtn.addEventListener('click', () => {
-  currentStep++;
-  updateStep(currentStep);
+currentStep++;
+updateStep(currentStep);
 });
 result.addEventListener('click', () => {
-  currentStep++;
-  updateStep(currentStep);
+currentStep++;
+updateStep(currentStep);
 });
 updateStep(currentStep);
