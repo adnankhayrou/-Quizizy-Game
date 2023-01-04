@@ -94,11 +94,11 @@ function answerSubmit(answer){
   // console.log(questionIndex);
 }
 
-const updateStep = stepIndex => {
+function updateStep (stepIndex) {
     // Update active step
-  steps.forEach(s => s.classList.remove('active'));
+  steps.forEach(step => step.classList.remove('active'));
   steps[stepIndex].classList.add('active');
-}; 
+};
 
 nextBtn.addEventListener('click', () => {
   currentStep++;
@@ -118,10 +118,7 @@ function json() {
   let getData = new XMLHttpRequest();
   getData.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
-                // console.log(this.responseText);
                 questions=JSON.parse(this.responseText);
-                // questionIndex = randoom(questions);
-                // console.log(questions);
               }
           };
   getData.open("GET", "/Quizizy-Game/php/scripts.php" , false);
