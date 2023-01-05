@@ -8,8 +8,6 @@
     $stmt->execute() ;
     $data = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 
-    // var_dump($data);
-
     $quizzData = json_encode($data);
     // "var questions = ".
     // ." ; var questionsStock = [];"

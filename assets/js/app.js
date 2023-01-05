@@ -15,6 +15,14 @@ const answers = document.querySelector('.answers');
 let questions = [];
 let questionsStock = [];
 json();
+for (let i = 0; i < nextQst.length; i++) {
+  nextQst[i].addEventListener('click',nextQuestion);
+}
+let currentStep = 0;
+let questionIndex = randoom(questions) ;
+let score = 0;
+let questionCont = 0;
+
 // 
 // let intervalId;
 // function questionTimer(){
@@ -38,15 +46,6 @@ json();
 // }
 // 
 
-for (let i = 0; i < nextQst.length; i++) {
-  nextQst[i].addEventListener('click',nextQuestion);
-}
-let currentStep = 0;
-let questionIndex = randoom(questions) ;
-let score = 0;
-let questionCont = 0;
-
-
 results.style.display = 'none';
 result.style.display = 'none';
 result.addEventListener('click', () => {
@@ -56,7 +55,7 @@ result.addEventListener('click', () => {
 })
 
 document.querySelector("#cards-quiz").style.display = 'none';
-    document.querySelector("#start-button").addEventListener('click', () => {
+document.querySelector("#start-button").addEventListener('click', () => {
     document.querySelector("#cards-quiz").style.display = 'block';
     document.querySelector("#card-info").style.display = 'none';
     nextQuestion();
@@ -85,8 +84,8 @@ function displayAnswers () {
 }
 
 function nextQuestion(){
+
   if (questions.length == 0) {
-    // clearInterval(intervalId);
     result.style.display = 'block';
     return
   }
@@ -105,9 +104,6 @@ function answerSubmit(answer){
   if(answer == questions[questionIndex].correct){
     score++;
     // console.log(score);
-    if (score >= 5) {
-      resParag.innerHTML = 'congrat your score is ' + score +'/10'+ ' you win.';
-    }else resParag.innerHTML = 'sorry your score is ' + score +'/10'+ ' you lose good luck next time.';
   }else{
     questionsStock.push(questions[questionIndex]);
     // console.log(questionsStock);
@@ -116,6 +112,10 @@ function answerSubmit(answer){
   questions.splice(questionIndex,1);
   questionIndex = randoom(questions);
   // console.log(questionIndex);
+
+  if (score >= 5) {
+    resParag.innerHTML = 'congrat your score is ' + score +'/10'+ ' you win.';
+  }else resParag.innerHTML = 'sorry your score is ' + score +'/10'+ ' you lose good luck next time.';
 }
 
 function updateStep (stepIndex) {
@@ -132,7 +132,7 @@ result.addEventListener('click', () => {
   currentStep++;
   updateStep(currentStep);
 });
-updateStep(currentStep);
+// updateStep(currentStep);
 
 
 
@@ -146,5 +146,5 @@ function json() {
               }
           };
   getData.open("GET", "/Quizizy-Game/php/scripts.php");
-  getData.send();
+etData.send();
 }
