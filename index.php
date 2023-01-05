@@ -71,6 +71,8 @@
             <h2 class="title1">Quiz Time</h2>
             <!-- quiz counter -->
             <p class="counter"></p>
+            <!-- timer -->
+            <!-- <div class="counter" id="timer"></div> -->
             <!-- question -->
             <div class="ques-div">
                 <p class="question" id="question"></p>

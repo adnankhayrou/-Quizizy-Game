@@ -1,5 +1,5 @@
 <?php
-include_once "database.php";
+ include_once "database.php";
 
 
     $conn = new Database;
@@ -13,9 +13,9 @@ include_once "database.php";
     $quizzData = json_encode($data);
     // "var questions = ".
     // ." ; var questionsStock = [];"
-    // file_put_contents('./assets/js/data.js',$quizzData) ;
-    echo $quizzData;
-
+    //  file_put_contents('./assets/js/data.js',$quizzData) ;
+     echo $quizzData;
+    
 
 
 ?>

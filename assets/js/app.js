@@ -12,10 +12,32 @@ const resParag = document.querySelector('.res-parag');
 const nextQst = document.querySelectorAll('.answer');
 const counter = document.querySelector('.counter');
 const answers = document.querySelector('.answers');
-
 let questions = [];
 let questionsStock = [];
 json();
+// 
+// let intervalId;
+// function questionTimer(){
+//   let timer = 5;
+
+//   intervalId = setInterval(() => {
+
+//     timer--;
+//     document.getElementById("timer").innerHTML = timer;
+//     if(timer<=0){
+//       nextQuestion();
+//       answerSubmit("")
+//       timer = 5;
+//     } 
+//   }, 500);
+// }
+
+// function play(){
+//   nextQuestion();
+//   questionTimer();
+// }
+// 
+
 for (let i = 0; i < nextQst.length; i++) {
   nextQst[i].addEventListener('click',nextQuestion);
 }
@@ -64,9 +86,11 @@ function displayAnswers () {
 
 function nextQuestion(){
   if (questions.length == 0) {
+    // clearInterval(intervalId);
     result.style.display = 'block';
     return
   }
+  
   questionCont++;
   counter.innerHTML = questionCont +'/'+ (questions.length-1+questionCont);
   // console.log(questionCont);
@@ -118,9 +142,9 @@ function json() {
   let getData = new XMLHttpRequest();
   getData.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
-                questions=JSON.parse(this.responseText);
+                questions =JSON.parse(this.responseText);
               }
           };
-  getData.open("GET", "/Quizizy-Game/php/scripts.php" , false);
+  getData.open("GET", "/Quizizy-Game/php/scripts.php");
   getData.send();
 }
